@@ -3,6 +3,7 @@ library(haven)
 Projekt_Praxis <- read_sav("Projekt Praxis.sav")
 
 #Daten aufbereiten:
+#Sind die Daten als dataframe gespeichert?
 is.data.frame(Projekt_Praxis)
 #Datensatz ist als dataframe gespeichert
 
