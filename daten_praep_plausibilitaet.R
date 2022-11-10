@@ -1,6 +1,6 @@
 #Datensatz laden:
 library(haven)
-Projekt_Praxis <- read_sav("Projekt Praxis.sav")
+Projekt_Praxis <- read_sav("projekt_praxis_daten.sav")
 
 #Daten aufbereiten:
 #Sind die Daten als Dataframe gespeichert?
