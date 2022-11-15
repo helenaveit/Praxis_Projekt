@@ -5,6 +5,7 @@ Projekt_Praxis <- read_sav("projekt_praxis_daten.sav")
 #Daten aufbereiten:
 #Sind die Daten als Dataframe gespeichert?
 is.data.frame(Projekt_Praxis)
+Projekt_Praxis <- as.data.frame(Projekt_Praxis)
 #Datensatz ist als dataframe gespeichert
 
 #Plausibilitäts-Check:
@@ -13,7 +14,6 @@ sapply(sapply(Projekt_Praxis, unique), sort, na.last=TRUE)
 
 #Dann verschaffe ich mich einen Überblick über die Verteilung der Daten:
 summary(Projekt_Praxis)
-ls.str(Projekt_Praxis)
 
 #Im folgenden schaue ich, wieviel 'NA' Werte in den verschiedenen Variablen auftreten:
 colSums(is.na(Projekt_Praxis))
