@@ -9,6 +9,12 @@ output: word_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, include=FALSE}
+library(haven)
+Projekt_Praxis <- read_sav("projekt_praxis_daten.sav")
+Projekt_Praxis <- as.data.frame(Projekt_Praxis)
+```
+
 ##Neue Variblen erstellen:
 
 #Summe für SCI Coping Methods erstellen ohne alk Variable:
