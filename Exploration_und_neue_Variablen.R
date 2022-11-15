@@ -78,5 +78,14 @@ sort(sapply(Projekt_Praxis[, 120, drop = FALSE], unique))
 daten_pro <- Projekt_Praxis[grepl('Pat', Projekt_Praxis$Patientennummer),]
 daten_retro <- Projekt_Praxis[grepl('Retro', Projekt_Praxis$Patientennummer),]
 
+write.csv(daten_pro,"daten_pro.csv", row.names = TRUE)
+write.csv(daten_retro,"daten_retro.csv", row.names = TRUE)
 
+##Daten Exploration: interesannte Variablen plotten
+
+library("ggplot2")
+
+#interessante Variblen Fragestellung 1 (Besteht ein Zusammenhang zwischen dem Auftreten einer postpartalen Depression und den gemessenen Belastungen durch die COVID-19-Pandemie?):
+
+#
 
