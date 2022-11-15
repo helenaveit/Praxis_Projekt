@@ -31,6 +31,23 @@ Projekt_Praxis$postpartal_3d_Befinden_sum <- Projekt_Praxis$postpartal_3d_Befind
 sort(sapply(Projekt_Praxis[, 114, drop = FALSE], unique))
 #Diese Variable hat einen Skalenbereich von 0-15
 
+#BSF vor der Geburt (Positive Kategorien werden Substrahiert(Engagement, gehobene Stimmung), negative Addiert(Müdigkeit, Ängstliche Depressivität, Ärger, Teilnahmelosigkeit); D.h. eine hohe Summe bedeutet eine negative/unausgeglichene Stimmung):
+Projekt_Praxis$BSF_präpartal_sumall <- - Projekt_Praxis$BSF_präpartal_Engagement_sumof2 - 
+  Projekt_Praxis$BSF_präpartal_GehobeneStimmung_sumof2 + Projekt_Praxis$BSF_präpartal_Müdigkeit_sumof2 + 
+  Projekt_Praxis$BSF_präpartal_Ängstlichkeit_sumof4 + Projekt_Praxis$BSF_präpartal_Ärger_sumof2 + 
+  Projekt_Praxis$BSF_präpartal_Teilnahmslosigkeit_sumof2
+
+sort(sapply(Projekt_Praxis[, 115, drop = FALSE], unique))
+#Diese Variable hat einen Skalenbereich von (-10)-46
+
+#BSF nach der Geburt (Positive Kategorien werden Substrahiert(Engagement, gehobene Stimmung), negative Addiert(Müdigkeit, Ängstliche Depressivität, Ärger, Teilnahmelosigkeit); D.h. eine hohe Summe bedeutet eine negative/unausgeglichene Stimmung):
+Projekt_Praxis$BSF_postpartal_sumall <- - Projekt_Praxis$BSF_postpartal_3d_Engagement_sumof2_A - 
+  Projekt_Praxis$BSF_postpartal_3d_GehobeneStimmung_sumof2_A + Projekt_Praxis$BSF_postpartal_3d_Müdigkeit_sumof2_A + 
+  Projekt_Praxis$BSF_postpartal_3d_Ängstlichkeit_sumof4_A + Projekt_Praxis$BSF_postpartal_3d_Ärger_sumof2_A + 
+  Projekt_Praxis$BSF_postpartal_3d_Teilnahmslosigkeit_sumof2_A
+
+sort(sapply(Projekt_Praxis[, 116, drop = FALSE], unique))
+#Diese Variable hat einen Skalenbereich von (-10)-46
 
 #Covid Belastungs Summen:
 
@@ -39,7 +56,7 @@ Projekt_Praxis$covid_belastungss_sum <- Projekt_Praxis$covid_belastungss +
   Projekt_Praxis$covid_ängstess_ansteckung_kind + Projekt_Praxis$covid_ängstess_ansteckung_sie + 
   Projekt_Praxis$covid_ängstess_zeit_pp_hebammen + Projekt_Praxis$covid_ängstess_trennung_Fam_nach + 
   Projekt_Praxis$covid_ängstess_freizeit + Projekt_Praxis$covid_ängstess_kontakt_freunde
-sort(sapply(Projekt_Praxis[, 115, drop = FALSE], unique))
+sort(sapply(Projekt_Praxis[, 117, drop = FALSE], unique))
 #Skalenbereich von 7-28
 
 #Postpartal (kurz nach der Geburt):
@@ -47,7 +64,7 @@ Projekt_Praxis$covid_belastunggeburt_sum <- Projekt_Praxis$covid_belastunggeburt
   Projekt_Praxis$covid_ängstegeburt_ansteckung_kind + Projekt_Praxis$covid_ängstegeburt_ansteckung_sie + 
   Projekt_Praxis$covid_ängstegeburt_zeit_nach + Projekt_Praxis$covid_ängstegeburt_trennung_fam_nach + 
   Projekt_Praxis$covid_ängstegeburt_freizeit + Projekt_Praxis$covid_ängstegeburt_kontakt_freunde
-sort(sapply(Projekt_Praxis[, 116, drop = FALSE], unique))
+sort(sapply(Projekt_Praxis[, 118, drop = FALSE], unique))
 #Skalenbereich von 7-28
 
 #Wochenbett: 
@@ -55,7 +72,7 @@ Projekt_Praxis$covid_belastungwochenbett_sum <- Projekt_Praxis$covid_belastungwo
   Projekt_Praxis$covid_ängstewochenbett_ansteckung_kind + Projekt_Praxis$covid_ängstewochenbett_ansteckung_sie + 
   Projekt_Praxis$covid_ängstewochenbett_unterstützung + Projekt_Praxis$covid_ängstewochenbett_trennung_fam_nach + 
   Projekt_Praxis$covid_ängstewochenbett_freizeit + Projekt_Praxis$covid_ängstewochenbett_kontakt_freunde
-sort(sapply(Projekt_Praxis[, 117, drop = FALSE], unique))
+sort(sapply(Projekt_Praxis[, 119, drop = FALSE], unique))
 #Skalenbereich von 7-28
 
 #2 Monate:
@@ -63,7 +80,7 @@ Projekt_Praxis$covid_belastung2m_sum <- Projekt_Praxis$covid_belastung2m +
   Projekt_Praxis$covid_ängste2m_ansteckung_kind + Projekt_Praxis$covid_ängste2m_ansteckung_sie + 
   Projekt_Praxis$covid_ängste2m_unterstützung + Projekt_Praxis$covid_ängste2m_trennung_fam_nach + 
   Projekt_Praxis$covid_ängste2m_freizeit + Projekt_Praxis$covid_ängste2m_kontakt_freunde
-sort(sapply(Projekt_Praxis[, 118, drop = FALSE], unique))
+sort(sapply(Projekt_Praxis[, 120, drop = FALSE], unique))
 #Skalenbereich von 7-28
 
 
@@ -72,7 +89,7 @@ Projekt_Praxis$covid_belastung2bis6m_sum <- Projekt_Praxis$covid_belastung2bis6m
   Projekt_Praxis$covidängste2bis6m_ansteckung_kind + Projekt_Praxis$covidängste2bis6m_ansteckung_sie + 
   Projekt_Praxis$covidängste2bis6m_unterstützung + Projekt_Praxis$covidängste2bis6m_trennung_fam_nach + 
   Projekt_Praxis$covidängste2bis6m_freizeit + Projekt_Praxis$covidängste2bis6m_kontakt_freunde
-sort(sapply(Projekt_Praxis[, 119, drop = FALSE], unique))
+sort(sapply(Projekt_Praxis[, 121, drop = FALSE], unique))
 #Skalenbereich von 7-28
 
 #6 Monate:
@@ -80,7 +97,7 @@ Projekt_Praxis$covid_belastung6m_sum <- Projekt_Praxis$covid_belastung6m +
   Projekt_Praxis$covidängste6m_ansteckung_kind + Projekt_Praxis$covidängste6m_ansteckung_sie + 
   Projekt_Praxis$covidängste6m_unterstützung + Projekt_Praxis$covidängste6m_trennung_fam_nach + 
   Projekt_Praxis$covidängste6m_freizeit + Projekt_Praxis$covidängste6m_kontakt_freunde
-sort(sapply(Projekt_Praxis[, 120, drop = FALSE], unique))
+sort(sapply(Projekt_Praxis[, 122, drop = FALSE], unique))
 #Skalenbereich von 7-28
 
 #Korrektion falsch benannter Variablen:
@@ -256,4 +273,38 @@ barplot_SCI_Profile
 ###interessante Variblen Fragestellung 3 (Besteht ein Zusammenhang zwischen dem Befinden und der Stimmung der Patientinnen vor und nach der Geburt (zum Beispiel Ängste vor der Geburt, Befinden nach der Geburt, Stimmungslage) und postnatalen depressiven Symptomen?):
 #Die interessanten Variablen hier sind die Variablen zu Präpartale Angst, Befinden nach der Geburt, BSF vor und nach der Geburt und EPDS zu allen Zeitpunkten (EPDS wurde oben schon einmal Visualisiert).
 
+#Präpartale Ängste:
+hist_präpartal_Ängste <- ggplot(data = Projekt_Praxis, mapping = aes(x = präpartal_Ängste_sum)) + 
+  geom_histogram(binwidth = 2) +
+  xlim(11.5, 48) +
+  ylim(0, 15) +
+  labs(title = "Histogramm: Präpartale Ängste Summe", 
+       x = "Präpartale Ängste Summe", y = "Anzahl")
+hist_präpartal_Ängste
 
+#Befinden nach der Geburt:
+hist_postpartal_Befinden <- ggplot(data = Projekt_Praxis, mapping = aes(x = postpartal_3d_Befinden_sum)) + 
+  geom_histogram(binwidth = 1) +
+  xlim(-0.5, 15.5) +
+  ylim(0, 20) +
+  labs(title = "Histogramm: Befinden nach der Geburt Summe", 
+       x = "Befinden nach der Geburt Summe", y = "Anzahl")
+hist_postpartal_Befinden
+
+#BSF vor der Geburt:
+hist_BSF_präpartal <- ggplot(data = Projekt_Praxis, mapping = aes(x = BSF_präpartal_sumall)) + 
+  geom_histogram(binwidth = 2) +
+  xlim(-11.5, 30) +
+  ylim(0, 15) +
+  labs(title = "Histogramm: BSF präpartal Summe", 
+       x = "BSF präpartal Summe", y = "Anzahl")
+hist_BSF_präpartal
+
+#BSF nach der Geburt:
+hist_BSF_postpartal <- ggplot(data = Projekt_Praxis, mapping = aes(x = BSF_postpartal_sumall)) + 
+  geom_histogram(binwidth = 2) +
+  xlim(-11.5, 30) +
+  ylim(0, 15) +
+  labs(title = "Histogramm: BSF postpartal Summe", 
+       x = "BSF postpartal Summe", y = "Anzahl")
+hist_BSF_postpartal
